@@ -300,6 +300,86 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
   .beat{grid-template-columns:4.3rem minmax(0,1fr);gap:.7rem;padding-inline:.4rem}
 }
 @media (max-width:380px){.beat{grid-template-columns:minmax(0,1fr);gap:.4rem}}
+
+/* ---------- print (A4) ---------- */
+@page{size:A4;margin:12mm 12mm 14mm}
+@media print{
+  :root{--ink:#ffffff;--ink-2:#f5f2ea;--ink-3:#e9e5da;--line:#cfc8b8;--ivory:#141210;--muted:#4a453b;--p1:#2c6a9a;--p2:#a87400;--p3:#5b43b8;color-scheme:light}
+  html,body{background:#fff!important;color:#141210}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;animation:none!important;transition:none!important}
+  .player,nav.toc,.cuebar,.cuelist,.seg,.copy,.map-hint,.lang,#ref{display:none!important}
+  .wrap{max-width:none;padding:0}
+  section{padding-top:1.2rem;break-before:auto}
+  #room,#decide{break-before:page}
+  .sec-head,h2,.part-head{break-after:avoid}
+  html{font-size:13px}
+  .sec-head{margin-bottom:1rem}
+  .sec-head p{font-size:.95rem}
+  h2{font-size:2.4rem}
+  .ticket{break-inside:avoid}
+  .weave{margin-top:.6rem}
+  .meta p{color:#4a453b}
+  .chip{background:#141210;color:#ffc629}
+  .facts{grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin-top:1rem}
+  .fact{background:#f5f2ea;padding:.8rem}
+  .fact b{font-size:2rem}
+  .timeline{background:#f5f2ea;break-inside:avoid}
+  #energy .bg{fill:#ffffff}
+  #energy{height:120px}
+  #energy .area{fill-opacity:.35}
+  .tl-note{color:#4a453b}
+  .part{grid-template-columns:9rem minmax(0,1fr);gap:1rem;padding-block:1rem;break-inside:auto}
+  .part-head{position:static}
+  .part-head .num{font-size:4rem}
+  .part-head h3{font-size:1.8rem}
+  .beat{break-inside:avoid;padding:.45rem .3rem;grid-template-columns:3.6rem minmax(0,1fr);gap:.6rem}
+  .beat.is-now{background:none}
+  .beat-body p{font-size:.92rem}
+  .tbtn{background:none;border:1px solid #cfc8b8;color:#141210;height:1.6rem;font-size:.8rem}
+  .tbtn::before{display:none}
+  .music{color:#4a453b;font-size:.78rem}
+  .lightnote{background:#fff3c8;color:#141210;font-size:.78rem}
+  .go{background:#ffc629;color:#141210}
+  .go.end{background:#141210;color:#fff}
+  .setup{background:#fbf6e6;break-inside:avoid}
+  .looks{grid-template-columns:repeat(4,minmax(0,1fr));gap:.4rem}
+  .lk .id b{font-size:1.8rem}
+  .lk{background:#f5f2ea;break-inside:avoid;padding:.8rem}
+  .lk .id button{background:none;border:1px solid #cfc8b8;color:#141210}
+  .lk .badge{color:#fff}
+  .note{background:#f5f2ea;break-inside:avoid}
+  .room{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1rem;break-inside:avoid}
+  .room-fig{background:#fff;border:1px solid #cfc8b8;break-inside:avoid}
+  .map-scroll{overflow:visible}
+  #map{min-width:0!important}
+  #map .seats{fill:#e9e5da}
+  #map .aisle{fill:#ffffff}
+  #map .stage{fill:#efe9db}
+  #map .route{opacity:1!important}
+  #map text{fill:#3d382f}
+  #map .lbl-strong{fill:#141210}
+  #map .r-rail{stroke:#141210}
+  .routes-text div{background:#f5f2ea;break-inside:avoid}
+  #light{break-before:auto}
+  .lightplan{grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
+  .lp{background:#f5f2ea;background-image:none;break-inside:avoid}
+  .tablewrap{background:#fff;border:1px solid #cfc8b8;overflow:visible}
+  .gotable tr{break-inside:avoid}
+  .gotable thead{display:table-header-group!important}
+  .gotable,.gotable tbody{display:table!important;width:100%}
+  .gotable tbody{display:table-row-group!important}
+  .gotable tr{display:table-row!important}
+  .gotable td{display:table-cell!important;padding:.5rem .6rem!important;border-bottom:1px solid #cfc8b8!important}
+  .gotable .file{color:#4a453b}
+  .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card{background:#f5f2ea;break-inside:avoid}
+  .card.sun{background:#ffc629}
+  .reh li{background:#f5f2ea;break-inside:avoid;grid-template-columns:7rem minmax(0,1fr)}
+  .reh li.key{background:#fff3c8}
+  .decide{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .decide .card b{color:#a87400}
+  footer{margin-top:1.5rem}
+}
 </style>
 
 </head>
