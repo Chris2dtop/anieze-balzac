@@ -69,7 +69,8 @@ nav.toc a{font-family:var(--mono);font-size:.8rem;color:var(--ivory);text-decora
 nav.toc a:hover{border-color:var(--sun);color:var(--sun)}
 
 /* ---------- parts legend / facts ---------- */
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;margin-top:2.4rem}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2.4rem}
+@media (max-width:980px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .fact{background:var(--ink-2);border-radius:12px;padding:1.2rem 1.3rem;display:grid;gap:.2rem;border-top:4px solid var(--pc,var(--sun))}
 .fact b{font-family:var(--display);font-weight:400;font-size:2.8rem;line-height:1;color:var(--pc,var(--sun));font-variant-numeric:tabular-nums}
 .fact span{font-size:.92rem;color:var(--muted)}
@@ -114,7 +115,7 @@ nav.toc a:hover{border-color:var(--sun);color:var(--sun)}
 .beat-body{display:grid;gap:.35rem;min-width:0}
 .beat-body p{margin:0;font-size:1.02rem}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem .55rem;align-items:center}
-.go{font-family:var(--display);font-size:1.05rem;line-height:1;background:var(--sun);color:var(--on-sun);padding:.2rem .45rem;border-radius:5px;letter-spacing:.03em}
+.go{white-space:nowrap;font-family:var(--display);font-size:1.05rem;line-height:1;background:var(--sun);color:var(--on-sun);padding:.2rem .45rem;border-radius:5px;letter-spacing:.03em}
 .go.end{background:var(--ivory)}
 .music{font-size:.85rem;color:var(--muted);display:inline-flex;gap:.35rem;align-items:baseline}
 .music::before{content:"♪";color:var(--pc)}
@@ -221,6 +222,57 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
 .scrub{grid-column:1/-1;height:5px;background:var(--ink-3);border-radius:3px;cursor:pointer;position:relative}
 .scrub i{position:absolute;left:0;top:0;bottom:0;background:var(--pc);border-radius:3px;width:0}
 
+
+.cuelist{display:none;gap:.45rem;overflow-x:auto;padding:.7rem 0 .2rem;scrollbar-width:thin}
+.cuechip{flex:0 0 auto;display:inline-flex;align-items:center;gap:.4rem;background:var(--ink-3);color:var(--ivory);border:0;border-radius:999px;padding:.3rem .7rem .3rem .3rem;font-family:var(--mono);font-size:.78rem;cursor:pointer;font-variant-numeric:tabular-nums}
+.cuechip b{font-family:var(--display);font-weight:400;font-size:1rem;line-height:1;background:var(--c,var(--sun));color:var(--on-sun);border-radius:999px;min-width:1.6rem;padding:.2rem .4rem;text-align:center}
+.cuechip.end b{background:var(--ivory)}
+.map-scroll{overflow-x:auto}
+.map-hint{display:none;font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:.5rem 0 0}
+@media (max-width:640px){
+  .wrap{padding-bottom:10rem}
+  section{padding-top:3.2rem}
+  .tl-inner{min-width:0}
+  .timeline{padding:.9rem .8rem .7rem}
+  #energy{height:140px}
+  .legend{font-size:.6rem;letter-spacing:.06em}
+  .cuebar{display:none}
+  .cuelist{display:flex}
+  #map{min-width:560px}
+  .map-hint{display:block}
+  .gotable thead{display:none}
+  .gotable,.gotable tbody{display:block}
+  .gotable tr{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"cue plan" "when when" "file file";gap:.45rem .8rem;padding:1rem 1.1rem;border-bottom:1px solid var(--line)}
+  .gotable tr:last-child{border-bottom:0}
+  .gotable td{padding:0;border:0;width:auto!important}
+  .gotable td:nth-child(1){grid-area:cue}
+  .gotable td:nth-child(2){grid-area:when;font-size:1rem}
+  .gotable td:nth-child(3){grid-area:file;word-break:break-word}
+  .gotable td:nth-child(4){grid-area:plan;justify-self:end;color:var(--muted)}
+  .gotable tr.endrow td{background:none}
+  .gotable tr.endrow{background:rgba(255,198,41,.1)}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+  .fact{padding:1rem}
+  .fact b{font-size:2.2rem}
+  .fact span{font-size:.84rem}
+  .player-in{grid-template-columns:auto minmax(0,1fr);column-gap:.8rem;row-gap:.5rem}
+  #clock{grid-column:2;grid-row:2;font-size:.8rem}
+  .now{grid-column:2;grid-row:1}
+  #play{grid-row:1/3;width:2.8rem;height:2.8rem}
+  .scrub{grid-row:3}
+  .note{grid-template-columns:minmax(0,1fr);gap:.4rem}
+  .t-top{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .stub-row b{font-size:1.7rem}
+  .hero-title span{-webkit-text-stroke-width:1.5px}
+  .part-head .num{font-size:4.6rem}
+  .part-head h3{font-size:2rem}
+}
+@media (max-width:380px){
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .beat{grid-template-columns:minmax(0,1fr);gap:.4rem}
+  .tbtn{justify-self:start}
+}
+
 @media (max-width:760px){
   .ticket{grid-template-columns:minmax(0,1fr)}
   .ticket::before,.ticket::after{display:none}
@@ -233,6 +285,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
   .reh li{grid-template-columns:minmax(0,1fr);gap:.25rem}
   .beat{grid-template-columns:4.3rem minmax(0,1fr);gap:.7rem;padding-inline:.4rem}
 }
+@media (max-width:380px){.beat{grid-template-columns:minmax(0,1fr);gap:.4rem}}
 </style>
 
 </head>
@@ -293,6 +346,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
           <line id="head" class="head" x1="0" x2="0" y1="0" y2="100"/>
         </svg>
         <div class="cuebar" id="cuebar"></div>
+        <div class="cuelist" id="cuelist" role="group" aria-label="Jump to a cue"></div>
       </div></div>
       <p class="tl-note">Reference mix at the planned timings. Live, the operator presses each cue on the action, so the real show breathes around these marks.</p>
     </div>
@@ -331,7 +385,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
           <button type="button" data-r="rail" aria-pressed="false">Rail</button>
           <button type="button" data-r="late" aria-pressed="false">Late pair</button>
         </div>
-        <svg id="map" data-route="all" viewBox="0 0 600 560" role="img" aria-label="Schematic plan of the room with stage, stairs, three aisles, floor cloakroom, reserved row, doors and routes">
+        <div class="map-scroll"><svg id="map" data-route="all" viewBox="0 0 600 560" role="img" aria-label="Schematic plan of the room with stage, stairs, three aisles, floor cloakroom, reserved row, doors and routes">
           <defs><pattern id="seatpat" width="12" height="12" patternUnits="userSpaceOnUse"><rect x="1.5" y="2" width="9" height="7" rx="2" fill="#26231c"/></pattern></defs>
           <rect class="wall" x="10" y="10" width="580" height="540" rx="6"/>
           <line class="screen" x1="140" y1="26" x2="460" y2="26"/>
@@ -367,7 +421,8 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
           <polyline class="route r-arr" points="300,520 300,205 483,205 483,165 440,118 300,118 160,118 117,165 117,198 92,198 70,198 70,206 316,206 330,232"/>
           <polyline class="route r-rail" points="14,490 34,490 34,210 57,198"/>
           <polyline class="route r-late" points="14,500 28,500 28,205 117,205 117,165 160,128 300,128 440,128 483,165 483,205 545,205 545,232 470,232"/>
-        </svg>
+        </svg></div>
+        <p class="map-hint">Swipe the plan sideways to see the whole room.</p>
       </figure>
       <div class="routes-text">
         <div><h4><i></i>Guests · Part 2</h4><p>From the back of the room down the centre aisle, the red carpet. Security checks the invitation at the bottom. Up the right stair, across the stage to the hold spot (front, turn, five seconds, real flashes), down the left stair to the floor cloakroom: coat, ticket. Then along the front to the reserved row.</p></div>
@@ -540,6 +595,9 @@ function seek(t){ try{ audio.currentTime = t; }catch(e){} audio.play().catch(()=
     b.style.left = (c.t/TOTAL*100)+"%"; b.style.setProperty("--c", PC[partOfT(c.t)]);
     b.innerHTML = `<b>${c.go}</b><span>${c.plan.replace("≈","")}</span>`;
     b.setAttribute("aria-label", `Cue ${c.go} at ${c.plan}: ${c.when}`); b.onclick=()=>seek(c.t); bar.appendChild(b);
+    const k = document.createElement("button"); k.type="button"; k.className="cuechip"+(c.go==="END"?" end":"");
+    k.style.setProperty("--c", PC[partOfT(c.t)]); k.innerHTML = `<b>${c.go}</b>${c.plan}`;
+    k.setAttribute("aria-label", `Cue ${c.go} at ${c.plan}: ${c.when}`); k.onclick=()=>seek(c.t); document.getElementById("cuelist").appendChild(k);
   });
   document.getElementById("energy").addEventListener("click", e=>{ const r = e.currentTarget.getBoundingClientRect(); seek((e.clientX-r.left)/r.width*TOTAL); });
 })();
