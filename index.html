@@ -119,12 +119,14 @@ nav.toc a:hover{border-color:var(--sun);color:var(--sun)}
 .go.end{background:var(--ivory)}
 .music{font-size:.85rem;color:var(--muted);display:inline-flex;gap:.35rem;align-items:baseline}
 .music::before{content:"♪";color:var(--pc)}
+.lightnote{font-size:.85rem;color:var(--ivory);display:inline-flex;gap:.4rem;align-items:baseline;background:rgba(255,198,41,.12);border-radius:999px;padding:.1rem .6rem}
+.lightnote::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:radial-gradient(circle,#fff6d6 0 30%,var(--sun) 70%);box-shadow:0 0 8px var(--sun);align-self:center}
 .look{font-family:var(--mono);font-size:.72rem;color:var(--pc);border:1px solid color-mix(in srgb,var(--pc) 55%,transparent);padding:.08rem .45rem;border-radius:999px}
 .setup{background:color-mix(in srgb,var(--pc) 10%,var(--ink));border-radius:12px;padding:1rem 1.1rem;font-size:.97rem;margin-bottom:.8rem}
 .setup b{color:var(--pc);font-weight:600}
 
 /* ---------- looks ---------- */
-.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(14.5rem,1fr));gap:.9rem}
+.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(14.5rem,100%),1fr));gap:.9rem}
 .lk{--pc:var(--sun);background:var(--ink-2);border-radius:12px;padding:1.1rem 1.1rem 1.2rem;display:grid;gap:.4rem;align-content:start;position:relative;overflow:hidden}
 .lk[data-p="1"]{--pc:var(--p1)} .lk[data-p="2"]{--pc:var(--p2)} .lk[data-p="3"]{--pc:var(--p3)}
 .lk::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--pc)}
@@ -184,7 +186,14 @@ nav.toc a:hover{border-color:var(--sun);color:var(--sun)}
 .gotable .file{font-family:var(--mono);font-size:.76rem;color:var(--muted);word-break:break-all}
 .gotable .plan{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
 .gotable tr.endrow td{background:rgba(255,198,41,.1)}
-.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1.2rem;margin-top:1.4rem}
+.lightplan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.9rem}
+@media (max-width:980px){.lightplan{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.lightplan{grid-template-columns:minmax(0,1fr)}}
+.lp{background:var(--ink-2);border-radius:12px;padding:1.1rem 1.2rem;display:grid;gap:.3rem;align-content:start;border-top:4px solid var(--pc);background-image:radial-gradient(120% 80% at 50% 0%,color-mix(in srgb,var(--pc) 16%,transparent),transparent 60%)}
+.lp b{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pc);font-weight:500}
+.lp h4{margin:0;font-size:1.05rem;font-weight:600}
+.lp p{margin:0;font-size:.9rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(19rem,100%),1fr));gap:1.2rem;margin-top:1.4rem}
 .card{background:var(--ink-2);border-radius:14px;padding:1.3rem 1.4rem;display:grid;gap:.7rem;align-content:start}
 .card.sun{background:var(--sun);color:var(--on-sun)}
 .card.sun .eyebrow{color:var(--on-sun);opacity:.7}
@@ -203,7 +212,9 @@ nav.toc a:hover{border-color:var(--sun);color:var(--sun)}
 .reh small{display:block;color:var(--muted);font-size:.88rem;margin-top:.2rem}
 
 /* ---------- decide ---------- */
-.decide{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.decide{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+@media (max-width:980px){.decide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.decide{grid-template-columns:minmax(0,1fr)}}
 .decide .card b{font-family:var(--display);font-weight:400;font-size:3rem;line-height:.9;color:var(--sun)}
 .decide h3{font-size:1.15rem;font-weight:600}
 .decide p{margin:0;color:var(--muted)}
@@ -311,13 +322,13 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
       <p>Built by Claude on 16 October from script v2 and Codex's board. Script v2 stays the reference until Chris says “go v3”. Our exact slot comes from Cinewax.</p>
     </div>
     <nav class="toc" aria-label="Sections">
-      <a href="#listen">Listen</a><a href="#script">Minute by minute</a><a href="#looks">12 looks</a><a href="#room">The room</a><a href="#sound">Sound &amp; booth</a><a href="#rehearsal">Rehearsal 11:00</a><a href="#decide">To decide</a>
+      <a href="#listen">Listen</a><a href="#script">Minute by minute</a><a href="#looks">12 looks</a><a href="#room">The room</a><a href="#light">Light</a><a href="#sound">Sound &amp; booth</a><a href="#rehearsal">Rehearsal 11:00</a><a href="#decide">To decide</a>
     </nav>
     <div class="facts">
       <div class="fact" style="--pc:var(--p1)"><b>16 min</b><span>maximum. Written at 14:30 with the handover, leaving time for real-life slowness.</span></div>
       <div class="fact" style="--pc:var(--p2)"><b>12</b><span>distinct complete outfits, each with a front view, a turn and a five-second hold.</span></div>
       <div class="fact" style="--pc:var(--p3)"><b>8 + end</b><span>music cues pressed on a phone. One slow fade ends the show and starts the film.</span></div>
-      <div class="fact"><b>3</b><span>aisles in play: left for the rail, centre for the red carpet, right for the seats.</span></div>
+      <div class="fact"><b>3</b><span>aisles the guests can come down, left, centre or right, each followed by a light while the audience sits in the dark.</span></div>
     </div>
   </header>
 
@@ -375,7 +386,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
     <div class="sec-head">
       <span class="eyebrow">The room · schematic, not to scale</span>
       <h2 id="room-h">Who goes where</h2>
-      <p>Left and right as seen from the seats, facing the screen. The rail never touches the stairs. Confirm every mark at 11:00; if the doors sit on the other side, mirror everything.</p>
+      <p>Left and right as seen from the seats, facing the screen. Guests can come down any of the three aisles; which guest takes which aisle is decided at rehearsal. The rail never touches the stairs. Confirm every mark at 11:00; if the doors sit on the other side, mirror everything.</p>
     </div>
     <div class="room">
       <figure class="room-fig">
@@ -386,7 +397,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
           <button type="button" data-r="late" aria-pressed="false">Late pair</button>
         </div>
         <div class="map-scroll"><svg id="map" data-route="all" viewBox="0 0 600 560" role="img" aria-label="Schematic plan of the room with stage, stairs, three aisles, floor cloakroom, reserved row, doors and routes">
-          <defs><pattern id="seatpat" width="12" height="12" patternUnits="userSpaceOnUse"><rect x="1.5" y="2" width="9" height="7" rx="2" fill="#26231c"/></pattern></defs>
+          <defs><radialGradient id="spot"><stop offset="0" stop-color="#fff3c4" stop-opacity=".9"/><stop offset=".5" stop-color="#ffc629" stop-opacity=".35"/><stop offset="1" stop-color="#ffc629" stop-opacity="0"/></radialGradient><pattern id="seatpat" width="12" height="12" patternUnits="userSpaceOnUse"><rect x="1.5" y="2" width="9" height="7" rx="2" fill="#26231c"/></pattern></defs>
           <rect class="wall" x="10" y="10" width="580" height="540" rx="6"/>
           <line class="screen" x1="140" y1="26" x2="460" y2="26"/>
           <text x="300" y="44" text-anchor="middle">SCREEN · curtains open or closed (11:00)</text>
@@ -418,18 +429,39 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
           <line class="door" x1="588" y1="470" x2="588" y2="510"/>
           <text x="580" y="462" text-anchor="end">R door</text>
           <text x="20" y="535">rail parking: staff to confirm, exit kept clear</text>
-          <polyline class="route r-arr" points="300,520 300,205 483,205 483,165 440,118 300,118 160,118 117,165 117,198 92,198 70,198 70,206 316,206 330,232"/>
+          <g class="glow"><circle cx="300" cy="380" r="22" fill="url(#spot)"/><circle cx="566" cy="330" r="16" fill="url(#spot)"/><circle cx="300" cy="118" r="34" fill="url(#spot)"/></g>
+          <text class="t-sun" x="324" y="384">follow light</text>
+          <polyline class="route r-arr" points="300,520 300,205"/>
+          <polyline class="route r-arr" points="566,520 566,205"/>
+          <polyline class="route r-arr" points="40,520 40,212"/>
+          <polyline class="route r-arr" points="40,205 566,205"/>
+          <polyline class="route r-arr" points="483,205 483,165 440,118 300,118 160,118 117,165 117,198 92,198 70,198 70,206 316,206 330,232"/>
           <polyline class="route r-rail" points="14,490 34,490 34,210 57,198"/>
           <polyline class="route r-late" points="14,500 28,500 28,205 117,205 117,165 160,128 300,128 440,128 483,165 483,205 545,205 545,232 470,232"/>
         </svg></div>
         <p class="map-hint">Swipe the plan sideways to see the whole room.</p>
       </figure>
       <div class="routes-text">
-        <div><h4><i></i>Guests · Part 2</h4><p>From the back of the room down the centre aisle, the red carpet. Security checks the invitation at the bottom. Up the right stair, across the stage to the hold spot (front, turn, five seconds, real flashes), down the left stair to the floor cloakroom: coat, ticket. Then along the front to the reserved row.</p></div>
+        <div><h4><i></i>Guests · Part 2</h4><p>From the back of the room down the left, centre or right aisle, decided per guest. A light follows them all the way; the audience stays dark. Security checks the invitation at the foot of the stairs. Up onto the stage, into the spotlight at the hold spot (front, turn, five seconds, real flashes), down the left stair to the floor cloakroom: coat, ticket. Then along the front to the reserved row.</p></div>
         <div><h4><i class="rail"></i>The rail</h4><p>Comes in empty down the left aisle to the floor cloakroom at 5:45. Leaves full back up the left aisle at about 11:10, out of the left door, to the parking corner the cinema named by the main emergency exit. Never parked in an aisle, never on stairs.</p></div>
         <div><h4><i class="late"></i>The late pair · Part 3</h4><p>Wait just inside the left door and step aside for the rail; the attendant shows the cloakroom is closed. Coats on, tiptoe down the left aisle. Their seats are on the other side, and the stage is the shortcut: up the left stair, caught in the light, down the right stair, into the reserved row.</p></div>
       </div>
     </div>
+  </section>
+
+  <section id="light" aria-labelledby="light-h">
+    <div class="sec-head">
+      <span class="eyebrow">Lighting · the audience in the dark, the clothes in the light</span>
+      <h2 id="light-h">Follow the guest</h2>
+      <p>The room stays dark for the whole show. Only the stage and the person walking are lit. As each guest comes down an aisle, a light follows them; when they reach the stage, the spotlight on the hold spot takes over for their front, turn and five-second hold.</p>
+    </div>
+    <div class="lightplan">
+      <div class="lp" style="--pc:var(--p1)"><b>Start</b><h4>House to black</h4><p>Stage lit for Part 1. The audience sits in the dark from the first second.</p></div>
+      <div class="lp" style="--pc:var(--p2)"><b>Aisles</b><h4>A light follows each guest</h4><p>Left, centre or right aisle, whichever that guest uses. From the door to the stage stairs.</p></div>
+      <div class="lp" style="--pc:var(--p2)"><b>Stage</b><h4>Spotlight on the hold spot</h4><p>The brightest point in the room, where every outfit gets its front, turn and five-second hold.</p></div>
+      <div class="lp" style="--pc:var(--p3)"><b>End</b><h4>Blackout, then the film</h4><p>When both late guests sit and the music fades, the booth goes to black and starts the film.</p></div>
+    </div>
+    <div class="note"><b class="k">To ask the cinema</b><p>Does the room have a <b>follow spot</b> (poursuite) that can track someone down the aisles, and who would operate it? If not, the backup keeps the no-stagehands rule: <b>the photographer carries a small LED video light</b> and lights each guest from the front as part of the press scene, while the stage spot stays fixed on the hold spot. Decide at 11:00 after seeing the room's lights.</p></div>
   </section>
 
   <section id="sound" aria-labelledby="sound-h">
@@ -447,7 +479,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
     <div class="two">
       <div class="card sun">
         <span class="eyebrow">To agree with the booth at 11:00</span>
-        <blockquote class="quote" id="boothtext" lang="fr">« Pendant tout le défilé : salle à mi-intensité, scène éclairée. La musique change plusieurs fois, parfois plus douce, mais <strong>elle ne s'arrête jamais</strong>. La fin : les deux derniers invités traversent la scène puis s'assoient dans la rangée réservée. <strong>Quand les deux sont assis, notre régisseur baisse la musique jusqu'au silence en 3 secondes. C'est votre signal : noir, puis le film.</strong> Si la musique coupe par accident avant, ce n'est pas la fin : attendez qu'ils soient assis. »</blockquote>
+        <blockquote class="quote" id="boothtext" lang="fr">« Pendant tout le défilé : <strong>salle dans le noir</strong>, scène éclairée. Quand un mannequin descend une allée (gauche, centre ou droite), <strong>une lumière le suit</strong> jusqu'à la scène, puis <strong>la scène le met en lumière</strong> pendant sa pose. La musique change plusieurs fois, parfois plus douce, mais <strong>elle ne s'arrête jamais</strong>. La fin : les deux derniers invités traversent la scène puis s'assoient dans la rangée réservée. <strong>Quand les deux sont assis, notre régisseur baisse la musique jusqu'au silence en 3 secondes. C'est votre signal : noir, puis le film.</strong> Si la musique coupe par accident avant, ce n'est pas la fin : attendez qu'ils soient assis. »</blockquote>
         <button type="button" class="copy" id="copybtn">Copy the French text</button>
       </div>
       <div class="card">
@@ -479,12 +511,13 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
   <section id="decide" aria-labelledby="decide-h">
     <div class="sec-head">
       <span class="eyebrow">For Chris</span>
-      <h2 id="decide-h">Three things to decide</h2>
+      <h2 id="decide-h">Four things to decide</h2>
     </div>
     <div class="decide">
       <div class="card"><b>1</b><h3>Go v3?</h3><p>Say “go v3”, keep v2, or pick parts. On “go”, the main script and the decisions log are updated.</p></div>
       <div class="card"><b>2</b><h3>Listen to 5:00, 8:10, 12:20 and 13:15</h3><p>The dancer's groove, Arrival 3's Afrobeat, the late pair's Afro hip-hop, and the cinematic swell that carries the room into the film. Backups for cues 4, 7 and 8 sit in the audio folder.</p></div>
       <div class="card"><b>3</b><h3>Name the music operator</h3><p>Someone who isn't performing and can see the stage and the reserved row.</p></div>
+      <div class="card"><b>4</b><h3>Aisles and the follow light</h3><p>Which guest comes down which aisle, and whether the cinema has a follow spot or the photographer carries an LED light.</p></div>
     </div>
   </section>
 
@@ -522,7 +555,7 @@ const CUES = [
 ];
 const PARTS = [
   {n:"1", name:"Backstage", span:"0:00 – 5:45", where:"On stage. The people who make the premiere happen get ready.", beats:[
-    {t:0, go:"1", text:"Security walks on alone and inspects the room: a slow full turn, then a hold facing the audience.", music:"Satie, Gnossienne No. 1", look:"L01"},
+    {t:0, go:"1", text:"Security walks on alone and inspects the room: a slow full turn, then a hold facing the audience.", music:"Satie, Gnossienne No. 1", look:"L01", light:"House to black for the whole show; stage lit"},
     {t:25, text:"The walkie-talkie crackles. Security answers it, nods, gives a thumbs-up to the side: the crew can come in.", music:"crackle inside file 1"},
     {t:50, text:"The photographer tests a real flash on the empty stage. Security stops them for a badge; they open the jacket to show the pass, turn to show the back, hold.", look:"L02"},
     {t:90, text:"The make-up artist arrives with the kit, looks around for the models (a turn), hands on hips. Models 1 and 2 hurry in, late.", look:"L03"},
@@ -535,23 +568,23 @@ const PARTS = [
     {t:300, go:"4", text:"The Dancer is alone and dances the phrase for real, in their own style. Any dancer works, even a non-dancer who just moves. Ends on a held pose.", music:"Soft amapiano groove, easy for anyone to move to"},
     {t:325, text:"Security taps the Dancer's shoulder: it's time. The Dancer leaves; Security nods to the audience and goes to take the guest list."}
   ]},
-  {n:"2", name:"Cloakroom", span:"5:45 – 11:40", where:"The centre aisle becomes the red carpet. Security admits each guest when the music changes.", setup:true, beats:[
-    {t:345, go:"5", text:"The attendant wheels in the empty rail, every hanger facing the same way, down the left aisle to the floor cloakroom. Straightens the hangers, then poses, proud of the empty rail.", music:"Satie, Gymnopédie No. 1", look:"L08"},
-    {t:400, text:"Arrival 1: the make-up artist, now glamorous, in a coat.", music:"Chopin, Grande Valse Brillante"},
-    {t:445, text:"Arrival 2: Model 1 in a new complete outfit.", music:"Afro-house, La Nuit", look:"L09"},
-    {t:490, text:"Arrival 3: Model 2 in a new complete outfit.", music:"Afrobeat, Summer Groove", look:"L10"},
-    {t:535, text:"Arrival 4: the Dancer comes down the aisle dancing the phrase.", music:"Melodic techno"},
-    {t:580, text:"Arrival 5: Model 3 can't let go of the coat. Hugs it, hands it over, takes it back, finally lets go.", music:"Tender pizzicato"},
-    {t:625, text:"Arrival 6: the photographer hands in their own jacket, then takes one last photo of the attendant, who poses awkwardly.", music:"Afro-house, WE"},
+  {n:"2", name:"Cloakroom", span:"5:45 – 11:40", where:"The aisles become the red carpet. A light follows each guest down; on stage the spotlight takes over. Security admits each guest when the music changes.", setup:true, beats:[
+    {t:345, go:"5", text:"The attendant wheels in the empty rail, every hanger facing the same way, down the left aisle to the floor cloakroom. Straightens the hangers, then poses, proud of the empty rail.", music:"Satie, Gymnopédie No. 1", look:"L08", light:"Light follows the rail down the left aisle"},
+    {t:400, text:"Arrival 1: the make-up artist, now glamorous, in a coat, down the aisle chosen for them.", music:"Chopin, Grande Valse Brillante", light:"Follow light in the aisle → spotlight on stage; audience dark"},
+    {t:445, text:"Arrival 2: Model 1 in a new complete outfit.", music:"Afro-house, La Nuit", look:"L09", light:"Follow light → spotlight"},
+    {t:490, text:"Arrival 3: Model 2 in a new complete outfit.", music:"Afrobeat, Summer Groove", look:"L10", light:"Follow light → spotlight"},
+    {t:535, text:"Arrival 4: the Dancer comes down the aisle dancing the phrase.", music:"Melodic techno", light:"Follow light → spotlight"},
+    {t:580, text:"Arrival 5: Model 3 can't let go of the coat. Hugs it, hands it over, takes it back, finally lets go.", music:"Tender pizzicato", light:"Follow light → spotlight"},
+    {t:625, text:"Arrival 6: the photographer hands in their own jacket, then takes one last photo of the attendant, who poses awkwardly.", music:"Afro-house, WE", light:"Follow light → spotlight"},
     {t:670, text:"The rail is full. The attendant wheels it up the left aisle and out. Security sits at the end of the cast row. The music keeps playing."}
   ]},
   {n:"3", name:"Late arrivals", span:"11:40 – 14:30", where:"Two guests arrive late, want to be seen, and sit. They sit, it ends, the film begins.", beats:[
-    {t:700, go:"6", text:"The late pair appear at the left door, coats over their arms, looking for the cloakroom. They step aside for the rail. The attendant shows it's full and closed, and leaves.", music:"Tiptoe pizzicato, lighter but never silent"},
-    {t:720, text:"Coats on, they tiptoe down the left aisle trying to be invisible. At the front: their seats are on the other side, and the stage is the shortcut."},
-    {t:740, go:"7", text:"Up the left stair and into the light. Guest A tries to hurry across but can't resist a front, turn, hold. Guest B slides into the light for the same. Apologies to the audience.", music:"Bass hit, then an Afro hip-hop groove", look:"L11 · L12"},
-    {t:795, go:"8", text:"Down the right stair to the reserved row. Their seats are in the middle; Guest B points to a more visible one, and the planted row stands and shuffles once.", music:"A cinematic swell: quiet at first, rising, no drums"},
+    {t:700, go:"6", text:"The late pair appear at the left door, coats over their arms, looking for the cloakroom. They step aside for the rail. The attendant shows it's full and closed, and leaves.", music:"Tiptoe pizzicato, lighter but never silent", light:"The light finds them at the door"},
+    {t:720, text:"Coats on, they tiptoe down the left aisle trying to be invisible, but the light follows them. At the front: their seats are on the other side, and the stage is the shortcut.", light:"Follow light down the aisle"},
+    {t:740, go:"7", text:"Up the left stair and into the light. Guest A tries to hurry across but can't resist a front, turn, hold. Guest B slides into the light for the same. Apologies to the audience.", music:"Bass hit, then an Afro hip-hop groove", look:"L11 · L12", light:"Spotlight snaps on as they step on stage"},
+    {t:795, go:"8", text:"Down the right stair to the reserved row. Their seats are in the middle; Guest B points to a more visible one, and the planted row stands and shuffles once.", music:"A cinematic swell: quiet at first, rising, no drums", light:"Light follows them to the row"},
     {t:825, text:"They stand at their seats smoothing their coats. Security gives one look and an open-handed “sit”. They sit together, straight away, as the music reaches its height."},
-    {t:837, go:"END", text:"Both seated: the operator fades the music to silence in 3 seconds. The booth takes the room to black and starts the film.", music:"the only silence of the show"}
+    {t:837, go:"END", text:"Both seated: the operator fades the music to silence in 3 seconds. The booth takes the room to black and starts the film.", music:"the only silence of the show", light:"Blackout, then the film"}
   ]}
 ];
 const LOOKS = [
@@ -570,7 +603,7 @@ const LOOKS = [
 ];
 const REH = [
   ["11:00 – 11:10","Phone into the desk, operator named. Agree the end with the projection booth. Curtains open or closed.","One shared end cue; music audible in the room.",true],
-  ["11:10 – 11:25","Spacing: hold spot, stairs, floor cloakroom, rail route up the left aisle and parking, reserved row, the late pair's door. Tape the floor marks.","Routes fixed."],
+  ["11:10 – 11:25","Spacing and light: hold spot and its spotlight, the three aisles and how the follow light tracks a guest down each, stairs, floor cloakroom, rail route and parking, reserved row, the late pair's door. Decide which guest takes which aisle. Tape the floor marks.","Routes and aisles fixed; follow light or the LED backup chosen."],
   ["11:25 – 11:45","The ending, twice: rail leaves, pair at the door (cue 6), tiptoe, stage (cue 7), holds, down the stair (cue 8), shuffle, sit, fade, blackout. Then once with a deliberately slow sit.","No early blackout; both looks visible from the back row.",true],
   ["11:45 – 12:00","One full arrival, timed: centre aisle, stage, cloakroom, seat. Check that Security admits on the music change.","A realistic arrival time."],
   ["12:00 – 12:10","Time one complete outfit change, office to the back of the room.","Change confirmed, or switch to the 12-performer fallback."],
@@ -608,13 +641,14 @@ const beatEls = [];
   PARTS.forEach(p=>{
     const sec = document.createElement("div"); sec.className="part"; sec.dataset.p=p.n;
     let html = `<div class="part-head"><span class="num">${p.n}</span><h3>${p.name}</h3><span class="span">${p.span}</span><p>${p.where}</p></div><div>`;
-    if(p.setup) html += `<div class="setup"><b>Set-up:</b> cloakroom on the floor, front left. Photographer at the front as press. Security at the bottom of the centre aisle with the guest list. Each guest: down the centre aisle → invitation → up the right stair → hold spot → down the left stair → coat and ticket → reserved row.</div>`;
+    if(p.setup) html += `<div class="setup"><b>Set-up:</b> audience in the dark, stage lit. Cloakroom on the floor, front left. Photographer at the front as press. Security at the foot of the stage stairs with the guest list. Each guest comes down <b>one of the three aisles</b> (left, centre or right, decided per guest at rehearsal) with <b>a light following them</b> → invitation at the stairs → up onto the stage → <b>spotlight at the hold spot</b> → down the left stair → coat and ticket → reserved row.</div>`;
     html += `<ol class="beats">`;
     p.beats.forEach(b=>{
       const tags = [];
       if(b.go) tags.push(`<span class="go${b.go==="END"?" end":""}">${b.go==="END"?"END":"GO "+b.go}</span>`);
       if(b.music) tags.push(`<span class="music">${b.music}</span>`);
       if(b.look) tags.push(`<span class="look">${b.look}</span>`);
+      if(b.light) tags.push(`<span class="lightnote">${b.light}</span>`);
       html += `<li class="beat" data-t="${b.t}"><button type="button" class="tbtn" data-t="${b.t}" aria-label="Play from ${fmt(b.t)}">${fmt(b.t)}</button><div class="beat-body"><p>${b.text}</p>${tags.length?`<div class="tags">${tags.join("")}</div>`:""}</div></li>`;
     });
     html += `</ol></div>`;
