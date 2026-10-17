@@ -82,7 +82,7 @@ nav.toc a:hover{border-color:var(--sun);color:var(--sun)}
 .timeline{background:var(--ink-2);border-radius:14px;padding:1.2rem 1.2rem .8rem}
 .tl-scroll{overflow-x:auto}
 .tl-inner{min-width:40rem}
-.legend{display:grid;grid-template-columns:345fr 355fr 170fr;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem}
+.legend{display:grid;grid-template-columns:255fr 275fr 140fr;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem}
 .legend span{padding-left:.5rem;border-left:3px solid var(--c)}
 #energy{display:block;width:100%;height:180px;cursor:pointer;border-radius:6px}
 #energy .bg{fill:var(--ink)}
@@ -395,7 +395,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
       <div class="t-stub" aria-label="Date et lieu">
         <div class="stub-row"><small>Date</small><b>Sam. 17 oct.</b></div>
         <div class="stub-row"><small>Soirée dès</small><b>18:00</b></div>
-        <div class="stub-row"><small>Durée</small><b>≈ 14:30</b></div>
+        <div class="stub-row"><small>Durée</small><b>≈ 11:00</b></div>
         <div class="barcode" aria-hidden="true"></div>
       </div>
     </div>
@@ -408,9 +408,9 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
       <a href="#listen">Écouter</a><a href="#script">Minute par minute</a><a href="#looks">12 tenues</a><a href="#room">La salle</a><a href="#light">Lumière</a><a href="#sound">Son &amp; cabine</a><a href="#rehearsal">Répétition 11 h</a><a href="#decide">À décider</a>
     </nav>
     <div class="facts">
-      <div class="fact" style="--pc:var(--p1)"><b>16 min</b><span>maximum. Écrit à 14:30 avec la passation, ce qui laisse de la marge pour le direct.</span></div>
+      <div class="fact" style="--pc:var(--p1)"><b>16 min</b><span>maximum. Écrit à environ 11 minutes avec la passation, ce qui laisse de la marge pour le direct.</span></div>
       <div class="fact" style="--pc:var(--p2)"><b>12</b><span>tenues complètes différentes, chacune vue de face, en tour et en pose de cinq secondes.</span></div>
-      <div class="fact" style="--pc:var(--p3)"><b>8 + fin</b><span>tops musique lancés depuis un téléphone. Un fondu lent termine le spectacle et lance le film.</span></div>
+      <div class="fact" style="--pc:var(--p3)"><b>7 + fin</b><span>tops musique lancés depuis un téléphone. Un fondu lent termine le spectacle et lance le film.</span></div>
       <div class="fact"><b>3</b><span>allées que les invités peuvent descendre (gauche, centre ou droite), chacun suivi par une lumière, salle dans le noir.</span></div>
     </div>
   </header>
@@ -424,16 +424,16 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
     <div class="timeline">
       <div class="tl-scroll"><div class="tl-inner">
         <div class="legend" aria-hidden="true"><span style="--c:var(--p1);color:var(--p1)">Partie 1 · Coulisses</span><span style="--c:var(--p2);color:var(--p2)">Partie 2 · Vestiaire</span><span style="--c:var(--p3);color:var(--p3)">Partie 3 · Retard</span></div>
-        <svg id="energy" viewBox="0 0 870 100" preserveAspectRatio="none" role="img" aria-label="Courbe d'énergie de la bande-son sur 14 minutes 30">
+        <svg id="energy" viewBox="0 0 670 100" preserveAspectRatio="none" role="img" aria-label="Courbe d'énergie de la bande-son sur 11 minutes">
           <defs>
-            <linearGradient id="partgrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="870" y2="0">
-              <stop offset="0" stop-color="#8fbfe6"/><stop offset=".3965" stop-color="#8fbfe6"/>
-              <stop offset=".3966" stop-color="#ffc629"/><stop offset=".8045" stop-color="#ffc629"/>
-              <stop offset=".8046" stop-color="#b49cff"/><stop offset="1" stop-color="#b49cff"/>
+            <linearGradient id="partgrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="670" y2="0">
+              <stop offset="0" stop-color="#8fbfe6"/><stop offset=".3805" stop-color="#8fbfe6"/>
+              <stop offset=".3806" stop-color="#ffc629"/><stop offset=".7910" stop-color="#ffc629"/>
+              <stop offset=".7911" stop-color="#b49cff"/><stop offset="1" stop-color="#b49cff"/>
             </linearGradient>
             <clipPath id="playedclip"><rect id="playedrect" x="0" y="0" width="0" height="100"/></clipPath>
           </defs>
-          <rect class="bg" x="0" y="0" width="870" height="100"/>
+          <rect class="bg" x="0" y="0" width="670" height="100"/>
           <g id="cuelines"></g>
           <path id="area" class="area" d=""/>
           <path id="areaplayed" class="played" d="" clip-path="url(#playedclip)"/>
@@ -462,7 +462,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
       <p>Douze tenues complètes différentes, chacune vue de face, en tour et en pose de cinq secondes sans interruption. Les répétitions et les manteaux retirés ne comptent pas. Les vêtements de chaque tenue sont choisis par Chris au fitting. La couleur indique la partie où la tenue est montrée.</p>
     </div>
     <div class="looks" id="looksgrid"></div>
-    <div class="note"><b class="k">Changements</b><p>Les mannequins 1 et 2 sortent en premier pendant la course (vers 3:45) et redescendent leur allée dans une nouvelle tenue complète à 7:25 et 8:10. Cela leur laisse environ 3:30 et 4:15, trajet jusqu'au bureau compris. Chronométrer un changement en répétition. Si c'est trop juste, ou si 12 personnes sont là, deux autres personnes portent L09 et L10 aux mêmes moments.</p></div>
+    <div class="note"><b class="k">Changements</b><p>Les mannequins 1 et 2 sortent en premier pendant la course (vers 2:45) et redescendent leur allée dans une nouvelle tenue complète à 5:30 et 6:05. Cela ne leur laisse qu'environ 2:45 et 3:20, trajet jusqu'au bureau compris : le changement doit être simple. Chronométrer un changement en répétition. Si c'est trop juste, ou si 12 personnes sont là, deux autres personnes portent L09 et L10 aux mêmes moments.</p></div>
   </section>
 
   <section id="room" aria-labelledby="room-h">
@@ -526,7 +526,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
       </figure>
       <div class="routes-text">
         <div><h4><i></i>Invités · partie 2</h4><p>Depuis le fond de la salle, par l'allée gauche, centrale ou droite, selon l'invité. Une lumière les suit tout du long ; la salle reste dans le noir. La Sécurité vérifie l'invitation au pied des escaliers. Montée sur scène, dans la lumière du point de pose (face, tour, cinq secondes, vrais flashs), descente par l'escalier gauche jusqu'au vestiaire au sol : manteau, ticket. Puis le long de l'avant-scène jusqu'à la rangée réservée.</p></div>
-        <div><h4><i class="rail"></i>Le portant</h4><p>Arrive vide par l'allée gauche jusqu'au vestiaire au sol à 5:45. Repart plein par l'allée gauche vers 11:10, sort par la porte gauche, jusqu'au coin indiqué par le cinéma près de la sortie de secours principale. Jamais garé dans une allée, jamais dans un escalier.</p></div>
+        <div><h4><i class="rail"></i>Le portant</h4><p>Arrive vide par l'allée gauche jusqu'au vestiaire au sol à 4:15. Repart plein par l'allée gauche vers 8:25, sort par la porte gauche, jusqu'au coin indiqué par le cinéma près de la sortie de secours principale. Jamais garé dans une allée, jamais dans un escalier.</p></div>
         <div><h4><i class="late"></i>Les retardataires · partie 3</h4><p>Attendent juste derrière la porte gauche et s'écartent pour laisser passer le portant ; la personne du vestiaire leur montre que c'est fermé. Manteaux enfilés, ils descendent l'allée gauche sur la pointe des pieds. Leurs places sont de l'autre côté, et la scène est le raccourci : escalier gauche, pris dans la lumière, escalier droit, rangée réservée.</p></div>
       </div>
     </div>
@@ -550,7 +550,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
   <section id="sound" aria-labelledby="sound-h">
     <div class="sec-head">
       <span class="eyebrow">Un régisseur à la table · le projectionniste en cabine</span>
-      <h2 id="sound-h">Huit tops et un fondu</h2>
+      <h2 id="sound-h">Sept tops et un fondu</h2>
       <p>La musique ne s'arrête jamais avant la fin. Entre deux tops, le régisseur lance simplement le fichier suivant. Le seul silence de la soirée est le fondu final, et ce fondu est le signal de la cabine pour le noir et le film.</p>
     </div>
     <div class="tablewrap">
@@ -569,16 +569,16 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
         <span class="eyebrow">Le téléphone du régisseur</span>
         <ul>
           <li>Chargé à 100 %, mode avion et « Ne pas déranger » activés.</li>
-          <li>Les 8 fichiers téléchargés sur le téléphone, pas en streaming.</li>
-          <li>VLC (gratuit), playlist 01 → 08, <b>répéter un seul titre</b>, aléatoire désactivé : un fichier ne passe jamais seul au suivant.</li>
+          <li>Les 7 fichiers téléchargés sur le téléphone, pas en streaming.</li>
+          <li>VLC (gratuit), playlist 01 → 07, <b>répéter un seul titre</b>, aléatoire désactivé : un fichier ne passe jamais seul au suivant.</li>
           <li>Volume du téléphone au maximum ; niveau réglé au fader de la table.</li>
           <li>Câble jack branché à la table, et un téléphone de secours avec les mêmes fichiers.</li>
           <li>Placé pour voir la scène et la rangée réservée.</li>
         </ul>
-        <p style="margin:0;font-size:.88rem;color:var(--muted)">Les effets sonores sont dans les fichiers : le grésillement du talkie à 0:25 du fichier 1 (la Sécurité y répond), le tic-tac sous le fichier 3, le « boum » au début du fichier 7. Les flashs photo sont réels ; le cinéma les autorise.</p>
+        <p style="margin:0;font-size:.88rem;color:var(--muted)">Les effets sonores sont dans les fichiers : le grésillement du talkie à 0:25 du fichier 1 (la Sécurité y répond), le tic-tac sous le fichier 3, le « boum » au début du fichier 6. Les flashs photo sont réels ; le cinéma les autorise.</p>
       </div>
     </div>
-    <div class="note"><b class="k">Partie 2</b><p>Le fichier 5 est pré-mixé : piano, valse, afro-house, afrobeat, techno mélodique, pizzicato doux, afro-house. Chaque invité entre sur un son différent, et chaque changement est le signal pour que la Sécurité fasse descendre l'invité suivant. Le régisseur n'appuie sur rien pendant six minutes.</p></div>
+    <div class="note"><b class="k">Partie 2</b><p>Le fichier 5 est pré-mixé : piano, valse, afro-house, afrobeat, techno mélodique, pizzicato doux, afro-house. Chaque invité entre sur un son différent, et chaque changement est le signal pour que la Sécurité fasse descendre l'invité suivant. Le régisseur n'appuie sur rien pendant environ quatre minutes et demie.</p></div>
   </section>
 
   <section id="rehearsal" aria-labelledby="reh-h">
@@ -615,85 +615,84 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
 <div class="player" id="player" role="region" aria-label="Lecteur de la bande-son">
   <div class="player-in">
     <button type="button" id="play" aria-label="Écouter la bande-son"><svg viewBox="0 0 16 16" aria-hidden="true"><path id="playicon" d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></button>
-    <div id="clock">0:00 <span>/ 14:30</span></div>
+    <div id="clock">0:00 <span>/ 11:10</span></div>
     <div class="now"><span class="np-k" id="npk">Partie 1 · Coulisses</span><span class="np-t" id="npt">Appuyez sur lecture pour écouter le spectacle</span></div>
-    <div class="scrub" id="scrub" role="slider" aria-label="Position dans la bande-son" aria-valuemin="0" aria-valuemax="870" aria-valuenow="0" tabindex="0"><i id="scrubfill"></i></div>
+    <div class="scrub" id="scrub" role="slider" aria-label="Position dans la bande-son" aria-valuemin="0" aria-valuemax="670" aria-valuenow="0" tabindex="0"><i id="scrubfill"></i></div>
   </div>
 </div>
 <audio id="ref" src="audio/reference_v3.mp3" preload="metadata"></audio>
 
 <script>
 const T = {end:"FIN", playFrom:"Écouter à partir de", hear:"Écouter", newOutfit:"nouvelle tenue", cue:"Top", copied:"Copié", copy:"Copier le texte", selected:"Sélectionné : copiez", pause:"Pause", play:"Écouter la bande-son", pname:{1:"Partie 1 · Coulisses",2:"Partie 2 · Vestiaire",3:"Partie 3 · Retardataires"}};
-const ENERGY = [17, 34, 46, 49, 49, 47, 47, 52, 58, 56, 48, 39, 33, 36, 45, 50, 51, 45, 52, 49, 51, 40, 34, 44, 55, 65, 52, 43, 37, 33, 32, 37, 48, 49, 50, 47, 47, 44, 50, 57, 59, 51, 43, 35, 36, 43, 49, 50, 46, 51, 48, 48, 39, 33, 45, 58, 68, 59, 51, 45, 38, 49, 63, 72, 71, 72, 78, 77, 73, 67, 61, 56, 53, 53, 60, 67, 69, 64, 67, 61, 67, 64, 58, 47, 40, 38, 38, 46, 61, 68, 65, 55, 44, 44, 47, 49, 48, 48, 53, 54, 59, 54, 46, 41, 40, 39, 35, 40, 48, 55, 54, 50, 39, 39, 39, 42, 41, 40, 45, 39, 48, 43, 44, 34, 34, 30, 25, 40, 60, 76, 75, 75, 78, 78, 76, 65, 55, 50, 49, 41, 48, 54, 58, 57, 59, 67, 62, 63, 56, 47, 39, 38, 35, 34, 40, 51, 52, 49, 39, 35, 36, 49, 55, 53, 31, 15, 0, 17, 33, 50, 50, 48, 49, 49, 49, 49, 46, 52, 58, 64, 68, 70, 75, 72, 66, 58, 54, 55, 60, 64, 71, 72, 75, 73, 69, 60, 53, 46, 53, 64, 77, 79, 79, 76, 71, 62, 59, 61, 69, 76, 80, 78, 76, 71, 66, 62, 62, 64, 71, 76, 81, 81, 81, 81, 78, 74, 71, 69, 70, 72, 78, 81, 82, 82, 83, 82, 82, 82, 83, 81, 82, 82, 83, 81, 82, 83, 84, 83, 84, 83, 84, 82, 83, 83, 84, 83, 84, 83, 83, 82, 83, 83, 82, 83, 83, 85, 84, 84, 84, 85, 83, 84, 83, 85, 83, 83, 83, 84, 83, 84, 84, 85, 83, 83, 84, 85, 84, 84, 84, 85, 84, 84, 80, 77, 73, 70, 65, 59, 54, 58, 67, 75, 77, 77, 78, 76, 76, 77, 77, 77, 77, 78, 78, 79, 79, 78, 77, 78, 80, 81, 82, 81, 80, 81, 80, 81, 80, 81, 82, 82, 82, 82, 82, 80, 80, 75, 70, 63, 62, 61, 61, 62, 61, 63, 48, 48, 42, 53, 44, 49, 49, 49, 46, 38, 48, 50, 60, 59, 57, 59, 55, 56, 44, 47, 48, 48, 43, 39, 50, 46, 48, 42, 46, 53, 58, 63, 60, 64, 59, 57, 49, 53, 53, 55, 55, 49, 50, 46, 46, 47, 46, 52, 46, 54, 58, 61, 61, 55, 61, 58, 59, 61, 62, 65, 62, 65, 59, 55, 50, 53, 56, 61, 67, 65, 58, 53, 53, 57, 56, 54, 53, 58, 66, 68, 64, 57, 57, 61, 68, 69, 67, 62, 57, 53, 52, 58, 64, 68, 67, 61, 53, 47, 52, 62, 71, 72, 73, 76, 81, 82, 84, 83, 83, 81, 83, 83, 85, 84, 85, 84, 84, 84, 85, 85, 86, 85, 85, 84, 85, 84, 85, 85, 85, 84, 84, 83, 83, 83, 84, 83, 84, 84, 84, 83, 83, 84, 85, 86, 81, 71, 61, 60, 67, 75, 78, 78, 77, 78, 80, 77, 78, 77, 80, 78, 77, 77, 79, 79, 78, 78, 80, 81, 81, 80, 79, 79, 81, 81, 79, 79, 80, 83, 78, 78, 78, 82, 83, 80, 77, 75, 79, 83, 85, 82, 80, 79, 80, 83, 85, 86, 86, 86, 86, 86, 86, 77, 70, 70, 80, 87, 87, 87, 87, 86, 86, 86, 86, 86, 86, 86, 84, 75, 74, 76, 85, 87, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 78, 72, 73, 81, 81, 73, 68, 68, 68, 68, 67, 68, 68, 70, 72, 74, 74, 71, 69, 67, 67, 67, 68, 68, 69, 70, 70, 69, 68, 68, 67, 69, 71, 74, 75, 76, 75, 74, 74, 73, 73, 72, 73, 73, 73, 72, 72, 72, 70, 68, 69, 74, 79, 80, 81, 81, 81, 81, 81, 81, 81, 80, 80, 80, 80, 78, 76, 75, 76, 76, 75, 74, 76, 77, 76, 76, 76, 74, 71, 68, 71, 75, 78, 80, 80, 81, 81, 80, 80, 80, 81, 80, 81, 80, 80, 78, 78, 79, 79, 80, 80, 80, 81, 80, 81, 81, 81, 80, 80, 78, 76, 75, 77, 79, 80, 80, 80, 81, 81, 80, 80, 81, 81, 74, 71, 67, 68, 68, 67, 67, 61, 63, 62, 68, 68, 68, 65, 58, 60, 61, 67, 68, 67, 67, 62, 64, 62, 68, 68, 69, 67, 68, 64, 67, 61, 63, 61, 65, 67, 66, 67, 64, 65, 71, 79, 86, 85, 84, 83, 82, 85, 85, 87, 85, 85, 86, 81, 82, 81, 86, 86, 84, 83, 80, 77, 75, 72, 76, 77, 79, 78, 79, 82, 86, 87, 85, 85, 84, 87, 87, 86, 84, 75, 77, 71, 78, 75, 80, 80, 75, 78, 77, 84, 84, 85, 85, 84, 85, 70, 60, 47, 46, 46, 45, 50, 48, 55, 58, 59, 53, 50, 49, 52, 53, 57, 60, 60, 55, 49, 50, 51, 54, 52, 52, 48, 53, 57, 64, 61, 63, 63, 64, 60, 61, 59, 62, 60, 62, 62, 63, 59, 53, 44, 26, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const TOTAL = 870;
-const partOfT = t => t<345?1:t<700?2:3;
+const ENERGY = [17, 34, 46, 49, 49, 47, 47, 52, 58, 56, 48, 39, 33, 36, 45, 50, 51, 45, 52, 49, 51, 40, 34, 44, 55, 65, 52, 43, 37, 33, 32, 37, 48, 49, 50, 47, 47, 44, 50, 57, 59, 51, 43, 35, 36, 43, 49, 50, 46, 51, 48, 48, 39, 33, 45, 58, 68, 59, 51, 45, 38, 49, 63, 72, 71, 72, 78, 77, 73, 67, 61, 56, 53, 53, 60, 67, 69, 64, 67, 61, 67, 64, 58, 47, 40, 38, 38, 46, 61, 68, 65, 55, 44, 44, 47, 49, 48, 48, 53, 54, 59, 54, 46, 41, 40, 39, 35, 40, 48, 55, 54, 50, 39, 39, 39, 42, 41, 40, 45, 30, 17, 2, 21, 39, 55, 55, 53, 54, 54, 54, 54, 51, 57, 63, 70, 73, 75, 80, 77, 71, 63, 59, 60, 64, 65, 66, 64, 64, 65, 71, 76, 81, 81, 81, 81, 82, 82, 82, 82, 82, 82, 82, 79, 75, 72, 71, 72, 69, 70, 72, 78, 81, 82, 82, 83, 82, 82, 82, 83, 82, 83, 82, 83, 81, 82, 82, 84, 83, 84, 83, 84, 82, 83, 83, 84, 83, 84, 83, 83, 82, 83, 83, 82, 83, 83, 85, 84, 84, 83, 80, 77, 75, 77, 77, 78, 77, 77, 77, 78, 78, 77, 78, 78, 79, 79, 78, 77, 78, 80, 81, 82, 81, 80, 81, 80, 81, 80, 81, 82, 82, 82, 81, 82, 80, 80, 75, 70, 63, 62, 61, 61, 62, 61, 63, 49, 50, 45, 56, 47, 51, 51, 52, 49, 40, 50, 53, 62, 61, 59, 61, 57, 58, 46, 50, 51, 50, 46, 42, 53, 49, 51, 45, 49, 56, 60, 65, 62, 66, 61, 59, 52, 55, 55, 56, 53, 59, 61, 66, 63, 66, 60, 56, 51, 53, 57, 62, 67, 66, 59, 54, 54, 58, 57, 55, 54, 59, 67, 69, 65, 58, 58, 62, 69, 69, 67, 62, 58, 54, 53, 58, 67, 76, 81, 82, 84, 83, 83, 81, 83, 83, 84, 83, 85, 84, 84, 83, 85, 84, 85, 84, 85, 84, 84, 84, 85, 85, 85, 83, 84, 83, 83, 82, 83, 81, 78, 73, 73, 76, 79, 79, 78, 79, 81, 78, 79, 78, 81, 79, 78, 78, 80, 80, 79, 79, 81, 82, 82, 81, 80, 81, 82, 82, 80, 80, 81, 84, 79, 79, 78, 78, 79, 81, 85, 86, 86, 86, 86, 86, 86, 77, 70, 70, 80, 87, 87, 87, 87, 86, 86, 86, 86, 86, 86, 86, 84, 75, 74, 76, 85, 87, 86, 86, 86, 84, 80, 73, 69, 69, 69, 69, 68, 69, 69, 70, 73, 74, 74, 72, 70, 68, 68, 68, 69, 68, 70, 71, 71, 70, 68, 68, 68, 70, 71, 74, 76, 76, 75, 74, 73, 70, 71, 74, 79, 80, 81, 81, 81, 81, 81, 81, 81, 80, 80, 80, 80, 78, 76, 75, 76, 76, 75, 74, 76, 77, 76, 76, 76, 74, 71, 68, 71, 75, 78, 80, 80, 81, 81, 80, 80, 80, 81, 80, 81, 80, 80, 78, 78, 79, 79, 80, 80, 80, 81, 80, 81, 81, 81, 80, 80, 78, 76, 75, 77, 79, 80, 80, 80, 81, 81, 80, 81, 81, 81, 81, 81, 81, 81, 81, 81, 80, 80, 81, 82, 82, 81, 82, 82, 83, 82, 83, 82, 82, 80, 79, 80, 80, 82, 82, 82, 82, 82, 83, 82, 83, 84, 85, 86, 85, 84, 83, 82, 85, 85, 87, 85, 85, 86, 81, 82, 81, 86, 86, 84, 83, 80, 77, 75, 72, 76, 77, 79, 78, 79, 82, 86, 87, 85, 85, 84, 72, 59, 47, 46, 46, 45, 50, 48, 55, 58, 59, 52, 49, 49, 52, 53, 57, 60, 60, 55, 50, 50, 51, 54, 52, 52, 48, 52, 49, 42, 22, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const TOTAL = 670;
+const partOfT = t => t<255?1:t<530?2:3;
 const PC = {1:"var(--p1)",2:"var(--p2)",3:"var(--p3)"};
 const CUES = [
   {go:"1", t:0,   when:"Top départ convenu : la Sécurité entre seule", file:"01_LA_SALLE_securite-entre", plan:"0:00"},
-  {go:"2", t:165, when:"Le danseur entre", file:"02_LA_PHRASE_danseur-entre", plan:"2:45"},
-  {go:"3", t:225, when:"La Sécurité tape sur sa montre : « dehors ! »", file:"03_IL_EST_L_HEURE_tape-la-montre", plan:"3:45"},
-  {go:"4", t:300, when:"Le danseur est seul et danse la phrase pour de vrai", file:"04_DERNIERE_REPETITION_danseur-seul", plan:"5:00"},
-  {go:"5", t:345, when:"La personne du vestiaire arrive avec le portant vide", file:"05_LES_ARRIVEES_portant-vide-entre", plan:"5:45"},
-  {go:"6", t:700, when:"Les retardataires apparaissent à la porte gauche", file:"06_LES_RETARDATAIRES_couple-apparait", plan:"11:40"},
-  {go:"7", t:740, when:"Les retardataires montent sur scène, dans la lumière", file:"07_VUS_ENFIN_lumiere-sur-le-couple", plan:"12:20"},
-  {go:"8", t:795, when:"Les retardataires descendent l'escalier droit vers leurs places", file:"08_VERS_LE_FILM_couple-descend-de-scene", plan:"13:15"},
-  {go:"END", t:837, when:"Les deux retardataires sont assis : fader à zéro en 3 secondes. Cabine : noir, puis le film.", file:"fader de la table", plan:"≈14:00"}
+  {go:"2", t:120, when:"Le danseur entre", file:"02_LA_PHRASE_danseur-entre", plan:"2:00"},
+  {go:"3", t:165, when:"La Sécurité tape sur sa montre : « dehors ! »", file:"03_IL_EST_L_HEURE_tape-la-montre", plan:"2:45"},
+  {go:"4", t:210, when:"Le danseur est seul et danse la phrase pour de vrai", file:"04_DERNIERE_REPETITION_danseur-seul", plan:"3:30"},
+  {go:"5", t:255, when:"La personne du vestiaire arrive avec le portant vide", file:"05_LES_ARRIVEES_portant-vide-entre", plan:"4:15"},
+  {go:"6", t:575, when:"Les retardataires montent sur scène, dans la lumière", file:"06_VUS_ENFIN_lumiere-sur-le-couple", plan:"9:35"},
+  {go:"7", t:610, when:"Les retardataires descendent l'escalier droit vers leurs places", file:"07_VERS_LE_FILM_couple-descend-de-scene", plan:"10:10"},
+  {go:"END", t:637, when:"Les deux retardataires sont assis : fader à zéro en 3 secondes. Cabine : noir, puis le film.", file:"fader de la table", plan:"≈10:40"}
 ];
 const PARTS = [
-  {n:"1", name:"Coulisses", span:"0:00 – 5:45", where:"Sur scène. Celles et ceux qui font l'avant-première se préparent.", beats:[
+  {n:"1", name:"Coulisses", span:"0:00 – 4:15", where:"Sur scène. Celles et ceux qui font l'avant-première se préparent.", beats:[
     {t:0, go:"1", text:"La Sécurité entre seule et inspecte la salle : un tour complet, lent, puis une pose face au public.", music:"Satie, Gnossienne No. 1", look:"L01", light:"Salle au noir pendant tout le spectacle ; scène éclairée"},
     {t:25, text:"Le talkie-walkie grésille. La Sécurité répond, hoche la tête, pouce levé vers la coulisse : l'équipe peut entrer.", music:"grésillement dans le fichier 1"},
-    {t:50, text:"Le photographe teste un vrai flash sur la scène vide. La Sécurité lui demande son badge ; il ouvre sa veste pour le montrer, se tourne pour montrer le dos, pose.", look:"L02"},
-    {t:90, text:"Le maquilleur arrive avec sa trousse, cherche les mannequins du regard (un tour), mains sur les hanches. Les mannequins 1 et 2 arrivent en courant, en retard.", look:"L03"},
-    {t:110, text:"Le mannequin 1 vérifie sa tenue dans le miroir : face, tour, pose. Puis s'assoit pour le maquillage.", look:"L04"},
-    {t:130, text:"Le mannequin 2 attend et prend un selfie qui devient une vraie pose. Le photographe vole des photos ; le maquilleur le chasse avec un pinceau.", look:"L05"},
-    {t:165, go:"2", text:"Le danseur entre en s'échauffant et répète une phrase : marche, tour, arrêt, un coup de veste.", music:"The Ballet Dancer, qui monte vers une techno mélodique africaine"},
-    {t:195, text:"Le mannequin 2 imite la phrase, le danseur la lui apprend, le mannequin 1 essaie depuis sa chaise. Ça devient un spectacle.", look:"L06"},
-    {t:225, go:"3", text:"La Sécurité tape sur sa montre : « dehors ! ». La course : les mannequins 1 et 2 sortent en premier pour se changer, le maquilleur range, le photographe file vers la place presse à l'avant.", music:"Techno avec un tic-tac"},
-    {t:250, text:"Le mannequin 3 traverse la scène déjà habillé : dernière vérification, pose, sortie.", look:"L07"},
-    {t:300, go:"4", text:"Le danseur est seul et danse la phrase pour de vrai, dans son propre style. N'importe quel danseur convient, même quelqu'un qui bouge simplement. Fin sur une pose tenue.", music:"Groove amapiano doux, facile pour tout le monde"},
-    {t:325, text:"La Sécurité touche l'épaule du danseur : c'est l'heure. Le danseur sort ; la Sécurité salue le public d'un signe de tête et va prendre la liste des invités."}
+    {t:30, text:"Le photographe teste un vrai flash sur la scène vide. La Sécurité lui demande son badge ; il ouvre sa veste pour le montrer, se tourne pour montrer le dos, pose.", look:"L02"},
+    {t:60, text:"Le maquilleur arrive avec sa trousse, cherche les mannequins du regard (un tour), mains sur les hanches. Les mannequins 1 et 2 arrivent en courant, en retard.", look:"L03"},
+    {t:80, text:"Le mannequin 1 vérifie sa tenue dans le miroir : face, tour, pose. Puis s'assoit pour le maquillage.", look:"L04"},
+    {t:100, text:"Le mannequin 2 attend et prend un selfie qui devient une vraie pose. Le photographe vole des photos ; le maquilleur le chasse avec un pinceau.", look:"L05"},
+    {t:120, go:"2", text:"Le danseur entre en s'échauffant et répète une phrase : marche, tour, arrêt, un coup de veste.", music:"The Ballet Dancer, qui monte vers une techno mélodique africaine"},
+    {t:140, text:"Le mannequin 2 imite la phrase, le danseur la lui apprend, le mannequin 1 essaie depuis sa chaise. Ça devient un spectacle.", look:"L06"},
+    {t:165, go:"3", text:"La Sécurité tape sur sa montre : « dehors ! ». La course : les mannequins 1 et 2 sortent en premier pour se changer, le maquilleur range, le photographe file vers la place presse à l'avant.", music:"Techno avec un tic-tac"},
+    {t:185, text:"Le mannequin 3 traverse la scène déjà habillé : dernière vérification, pose, sortie.", look:"L07"},
+    {t:210, go:"4", text:"Le danseur est seul et danse la phrase pour de vrai, dans son propre style. N'importe quel danseur convient, même quelqu'un qui bouge simplement. Fin sur une pose tenue.", music:"Groove amapiano doux, facile pour tout le monde"},
+    {t:235, text:"La Sécurité touche l'épaule du danseur : c'est l'heure. Le danseur sort ; la Sécurité salue le public d'un signe de tête et va prendre la liste des invités."}
   ]},
-  {n:"2", name:"Vestiaire", span:"5:45 – 11:40", where:"Les allées deviennent le tapis rouge. Une lumière suit chaque invité ; sur scène, la lumière du point de pose prend le relais. La Sécurité fait entrer chaque invité quand la musique change.", setup:true, beats:[
-    {t:345, go:"5", text:"La personne du vestiaire pousse le portant vide, tous les cintres dans le même sens, par l'allée gauche jusqu'au vestiaire au sol. Elle aligne les cintres, puis pose, fière du portant vide.", music:"Satie, Gymnopédie No. 1", look:"L08", light:"La lumière suit le portant dans l'allée gauche"},
-    {t:400, text:"Arrivée 1 : le maquilleur, maintenant élégant, en manteau, par l'allée qui lui est attribuée.", music:"Chopin, Grande Valse brillante", light:"Poursuite dans l'allée → lumière sur scène ; salle dans le noir"},
-    {t:445, text:"Arrivée 2 : le mannequin 1 dans une nouvelle tenue complète.", music:"Afro-house, La Nuit", look:"L09", light:"Poursuite → lumière de scène"},
-    {t:490, text:"Arrivée 3 : le mannequin 2 dans une nouvelle tenue complète.", music:"Afrobeat, Summer Groove", look:"L10", light:"Poursuite → lumière de scène"},
-    {t:535, text:"Arrivée 4 : le danseur descend l'allée en dansant la phrase.", music:"Techno mélodique", light:"Poursuite → lumière de scène"},
-    {t:580, text:"Arrivée 5 : le mannequin 3 n'arrive pas à lâcher son manteau. Il le serre, le donne, le reprend, et finit par le lâcher.", music:"Pizzicato tendre", light:"Poursuite → lumière de scène"},
-    {t:625, text:"Arrivée 6 : le photographe dépose sa propre veste, puis prend une dernière photo de la personne du vestiaire, qui pose maladroitement.", music:"Afro-house, WE", light:"Poursuite → lumière de scène"},
-    {t:670, text:"Le portant est plein. La personne du vestiaire le remonte par l'allée gauche et sort. La Sécurité s'assoit au bout de la rangée réservée. La musique continue."}
+  {n:"2", name:"Vestiaire", span:"4:15 – 8:50", where:"Les allées deviennent le tapis rouge. Une lumière suit chaque invité ; sur scène, la lumière du point de pose prend le relais. La Sécurité fait entrer chaque invité quand la musique change.", setup:true, beats:[
+    {t:255, go:"5", text:"La personne du vestiaire pousse le portant vide, tous les cintres dans le même sens, par l'allée gauche jusqu'au vestiaire au sol. Elle aligne les cintres, puis pose, fière du portant vide.", music:"Satie, Gymnopédie No. 1", look:"L08", light:"La lumière suit le portant dans l'allée gauche"},
+    {t:294, text:"Arrivée 1 : le maquilleur, maintenant élégant, en manteau, par l'allée qui lui est attribuée.", music:"Chopin, Grande Valse brillante", light:"Poursuite dans l'allée → lumière sur scène ; salle dans le noir"},
+    {t:329, text:"Arrivée 2 : le mannequin 1 dans une nouvelle tenue complète.", music:"Afro-house, La Nuit", look:"L09", light:"Poursuite → lumière de scène"},
+    {t:364, text:"Arrivée 3 : le mannequin 2 dans une nouvelle tenue complète.", music:"Afrobeat, Summer Groove", look:"L10", light:"Poursuite → lumière de scène"},
+    {t:399, text:"Arrivée 4 : le danseur descend l'allée en dansant la phrase.", music:"Techno mélodique", light:"Poursuite → lumière de scène"},
+    {t:434, text:"Arrivée 5 : le mannequin 3 n'arrive pas à lâcher son manteau. Il le serre, le donne, le reprend, et finit par le lâcher.", music:"Pizzicato tendre", light:"Poursuite → lumière de scène"},
+    {t:469, text:"Arrivée 6 : le photographe dépose sa propre veste, puis prend une dernière photo de la personne du vestiaire, qui pose maladroitement.", music:"Afro-house, WE", light:"Poursuite → lumière de scène"},
+    {t:505, text:"Le portant est plein. La personne du vestiaire le remonte par l'allée gauche et sort. La Sécurité s'assoit au bout de la rangée réservée. La musique continue."}
   ]},
-  {n:"3", name:"Retardataires", span:"11:40 – 14:30", where:"Deux invités arrivent en retard, veulent être vus, et s'assoient. Ils s'assoient, c'est fini, le film commence.", beats:[
-    {t:700, go:"6", text:"Les retardataires apparaissent à la porte gauche, manteau sur le bras, cherchant le vestiaire. Ils s'écartent pour laisser passer le portant. La personne du vestiaire leur montre qu'il est plein et fermé, et s'en va.", music:"Pizzicato sur la pointe des pieds, plus léger mais jamais silencieux", light:"La lumière les trouve à la porte"},
-    {t:720, text:"Manteaux enfilés, ils descendent l'allée gauche sur la pointe des pieds en essayant d'être invisibles, mais la lumière les suit. À l'avant : leurs places sont de l'autre côté, et la scène est le raccourci.", light:"Poursuite dans l'allée"},
-    {t:740, go:"7", text:"Escalier gauche, et les voilà dans la lumière. L'invité A veut traverser vite mais ne résiste pas : face, tour, pose. L'invité B se glisse dans la lumière pour faire de même. Excuses au public.", music:"Un « boum », puis un groove afro hip-hop", look:"L11 · L12", light:"La lumière s'allume quand ils montent sur scène"},
-    {t:795, go:"8", text:"Escalier droit jusqu'à la rangée réservée. Leurs places sont au milieu ; l'invité B montre une place plus visible, et la rangée (complices) se lève et se décale une fois.", music:"Une montée cinéma : douce au début, qui grandit, sans batterie", light:"La lumière les suit jusqu'à la rangée"},
-    {t:825, text:"Ils restent debout devant leurs places en lissant leurs manteaux. La Sécurité leur lance un regard et, main ouverte, un « asseyez-vous ». Ils s'assoient ensemble, aussitôt, au sommet de la musique."},
-    {t:837, go:"END", text:"Tous deux assis : le régisseur baisse la musique jusqu'au silence en 3 secondes. La cabine passe la salle au noir et lance le film.", music:"le seul silence du spectacle", light:"Noir, puis le film"}
+  {n:"3", name:"Retardataires", span:"8:50 – 11:10", where:"Deux invités arrivent en retard, veulent être vus, et s'assoient. Ils s'assoient, c'est fini, le film commence.", beats:[
+    {t:530, text:"Les retardataires apparaissent à la porte gauche, manteau sur le bras, cherchant le vestiaire. Ils s'écartent pour laisser passer le portant. La personne du vestiaire leur montre qu'il est plein et fermé, et s'en va.", music:"La musique des arrivées continue", light:"La lumière les trouve à la porte"},
+    {t:550, text:"Manteaux enfilés, ils descendent l'allée gauche sur la pointe des pieds en essayant d'être invisibles, mais la lumière les suit. À l'avant : leurs places sont de l'autre côté, et la scène est le raccourci.", light:"Poursuite dans l'allée"},
+    {t:575, go:"6", text:"Escalier gauche, et les voilà dans la lumière. L'invité A veut traverser vite mais ne résiste pas : face, tour, pose. L'invité B se glisse dans la lumière pour faire de même. Excuses au public.", music:"Un « boum », puis un groove afro hip-hop", look:"L11 · L12", light:"La lumière s'allume quand ils montent sur scène"},
+    {t:610, go:"7", text:"Escalier droit, et directement à leurs deux places dans la rangée réservée.", music:"Une montée cinéma : douce au début, qui grandit, sans batterie", light:"La lumière les suit jusqu'à la rangée"},
+    {t:625, text:"La Sécurité leur lance un regard et, main ouverte, un « asseyez-vous ». Ils s'assoient ensemble, aussitôt, au sommet de la musique."},
+    {t:637, go:"END", text:"Tous deux assis : le régisseur baisse la musique jusqu'au silence en 3 secondes. La cabine passe la salle au noir et lance le film.", music:"le seul silence du spectacle", light:"Noir, puis le film"}
   ]}
 ];
 const LOOKS = [
   ["L01","Sécurité",0,"L'inspection de la salle : un tour complet, puis une pose."],
-  ["L02","Photographe",50,"Contrôle du badge : ouvre la veste, se tourne, pose."],
-  ["L03","Maquilleur",90,"Cherche les mannequins en retard, mains sur les hanches."],
-  ["L04","Mannequin 1 · tenue A",110,"Vérification au miroir avant le maquillage."],
-  ["L05","Mannequin 2 · tenue A",130,"Un selfie qui devient une pose."],
-  ["L06","Danseur",195,"Fin de la phrase : arrêt, tour, pose."],
-  ["L07","Mannequin 3",250,"Traversée pendant la course : dernière vérification, pose."],
-  ["L08","Personne du vestiaire",345,"Fière du portant vide."],
-  ["L09","Mannequin 1 · tenue B",445,"Arrivée par le tapis rouge, point de pose.",true],
-  ["L10","Mannequin 2 · tenue B",490,"Arrivée par le tapis rouge, point de pose.",true],
-  ["L11","Retardataire A",740,"Pris dans la lumière de la scène."],
-  ["L12","Retardataire B",760,"Se glisse dans la lumière après A."]
+  ["L02","Photographe",30,"Contrôle du badge : ouvre la veste, se tourne, pose."],
+  ["L03","Maquilleur",60,"Cherche les mannequins en retard, mains sur les hanches."],
+  ["L04","Mannequin 1 · tenue A",80,"Vérification au miroir avant le maquillage."],
+  ["L05","Mannequin 2 · tenue A",100,"Un selfie qui devient une pose."],
+  ["L06","Danseur",140,"Fin de la phrase : arrêt, tour, pose."],
+  ["L07","Mannequin 3",185,"Traversée pendant la course : dernière vérification, pose."],
+  ["L08","Personne du vestiaire",255,"Fière du portant vide."],
+  ["L09","Mannequin 1 · tenue B",329,"Arrivée par le tapis rouge, point de pose.",true],
+  ["L10","Mannequin 2 · tenue B",364,"Arrivée par le tapis rouge, point de pose.",true],
+  ["L11","Retardataire A",575,"Pris dans la lumière de la scène."],
+  ["L12","Retardataire B",590,"Se glisse dans la lumière après A."]
 ];
 const REH = [
   ["11 h – 11 h 10","Téléphone branché à la table, régisseur désigné. Valider la fin avec la cabine. Rideaux ouverts ou fermés.","Un signal de fin commun ; la musique s'entend dans la salle.",true],
   ["11 h 10 – 11 h 25","Placement et lumière : point de pose et sa lumière, les trois allées et la poursuite dans chacune, escaliers, vestiaire au sol, parcours et rangement du portant, rangée réservée, porte des retardataires. Décider qui prend quelle allée. Marquer le sol au scotch.","Parcours et allées fixés ; poursuite confirmée ou non."],
-  ["11 h 25 – 11 h 45","La fin, deux fois : le portant part, les retardataires à la porte (top 6), pointe des pieds, scène (top 7), poses, escalier (top 8), décalage, assis, fondu, noir. Puis une fois avec un « assis » volontairement lent.","Pas de noir trop tôt ; les deux tenues visibles depuis le dernier rang.",true],
+  ["11 h 25 – 11 h 45","La fin, deux fois : le portant part, les retardataires à la porte, pointe des pieds dans l'allée, scène (top 6), poses, escalier (top 7), assis, fondu, noir. Puis une fois avec un « assis » volontairement lent.","Pas de noir trop tôt ; les deux tenues visibles depuis le dernier rang.",true],
   ["11 h 45 – 12 h","Une arrivée complète, chronométrée : allée, scène, vestiaire, place. Vérifier que la Sécurité fait entrer au changement de musique.","Un temps d'arrivée réaliste."],
   ["12 h – 12 h 10","Chronométrer un changement de tenue complet, du bureau au fond de la salle.","Changement confirmé, ou passage à la solution à 12 personnes."],
-  ["12 h 10 – 12 h 35","Filage complet avec doublures, les 8 fichiers, chronométré jusqu'à la fin.","Durée réelle, sous les 16 minutes.",true],
+  ["12 h 10 – 12 h 35","Filage complet avec doublures, les 7 fichiers, chronométré jusqu'à la fin.","Durée réelle, sous les 16 minutes.",true],
   ["12 h 35 – 12 h 50","Corriger les deux plus gros problèmes ; refaire les trois dernières minutes.",""],
   ["12 h 50 – 13 h","Filmer les parcours pour les absents, fixer un point le soir, libérer la salle.","Salle libre à 13 h."]
 ];
@@ -773,7 +772,7 @@ const PNAME = T.pname;
 let lastNow = null;
 function tick(){
   const t = audio.currentTime || 0;
-  document.getElementById("clock").innerHTML = `${fmt(t)} <span>/ 14:30</span>`;
+  document.getElementById("clock").innerHTML = `${fmt(t)} <span>/ 11:10</span>`;
   document.getElementById("scrubfill").style.width = (t/TOTAL*100)+"%";
   scrub.setAttribute("aria-valuenow", Math.round(t));
   document.getElementById("playedrect").setAttribute("width", t);
