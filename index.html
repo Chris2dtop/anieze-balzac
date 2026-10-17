@@ -179,6 +179,22 @@ nav.toc a:hover{border-color:var(--sun);color:var(--sun)}
 .routes-text h4 i.late{border-top:3px solid var(--p3)}
 .routes-text p{margin:0;font-size:.93rem;color:var(--muted)}
 
+/* ---------- downloads ---------- */
+.dlhead{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin:1.4rem 0 .9rem}
+.dlbtn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.8rem;text-decoration:none;border-radius:999px;padding:.5rem 1rem;border:1px solid var(--line);color:var(--ivory);background:var(--ink-2);white-space:nowrap}
+.dlbtn.main{background:var(--sun);color:#141210;border-color:var(--sun);font-weight:600}
+.dllist{list-style:none;margin:0;padding:0;background:var(--ink-2);border-radius:14px;overflow:hidden}
+.dllist li{--pc:var(--p1);display:grid;grid-template-columns:2.4rem 6.6rem minmax(0,1fr) auto auto;gap:.8rem;align-items:center;padding:.7rem .9rem;border-bottom:1px solid var(--line);border-left:4px solid var(--pc)}
+.dllist li:last-child{border-bottom:0}
+.dllist li[data-p="2"]{--pc:var(--p2)} .dllist li[data-p="3"]{--pc:var(--p3)}
+.dllist .n{font-family:var(--mono);color:var(--pc);font-weight:600}
+.dllist .tt{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.dllist .m b{display:block;font-weight:500}
+.dllist .m span{font-size:.85rem;color:var(--muted)}
+.dllist .hear{font-family:var(--mono);font-size:.75rem;background:none;border:1px solid var(--line);color:var(--ivory);border-radius:999px;padding:.35rem .7rem;cursor:pointer}
+@media (max-width:640px){.dllist li{grid-template-columns:2rem minmax(0,1fr) auto;grid-template-areas:"n m dl" "n t hear"}.dllist .n{grid-area:n}.dllist .m{grid-area:m}.dllist .tt{grid-area:t;font-size:.8rem;color:var(--muted)}.dllist .hear{grid-area:hear}.dllist .dlbtn{grid-area:dl}}
+@media print{.dllist .hear,.dllist .dlbtn,.dlhead .dlbtn{display:none}}
+
 /* ---------- sound ---------- */
 .tablewrap{overflow-x:auto;background:var(--ink-2);border-radius:14px}
 .gotable{width:100%;border-collapse:collapse;font-size:.97rem}
@@ -405,7 +421,7 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
       <p>Approved by Chris on 16 October, music included. This is the show we rehearse on Saturday at 11:00. Our exact slot comes from Cinewax.</p>
     </div>
     <nav class="toc" aria-label="Sections">
-      <a href="#listen">Listen</a><a href="#script">Minute by minute</a><a href="#looks">12 looks</a><a href="#room">The room</a><a href="#light">Light</a><a href="#sound">Sound &amp; booth</a><a href="#rehearsal">Rehearsal 11:00</a><a href="#decide">To decide</a>
+      <a href="#listen">Listen</a><a href="#script">Minute by minute</a><a href="#looks">12 looks</a><a href="#room">The room</a><a href="#light">Light</a><a href="#sound">Sound &amp; booth</a><a href="#music">⬇ Music</a><a href="#rehearsal">Rehearsal 11:00</a><a href="#decide">To decide</a>
     </nav>
     <div class="facts">
       <div class="fact" style="--pc:var(--p1)"><b>16 min</b><span>maximum. Written at about 11 minutes with the handover, leaving time for real-life slowness.</span></div>
@@ -581,6 +597,33 @@ footer{margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--line);fon
     <div class="note"><b class="k">Part 2</b><p>File 5 is pre-mixed: piano, waltz, Afro-house, Afrobeat, melodic techno, soft pizzicato, Afro-house. Every guest walks in on a different sound, and each change is Security's cue to let the next guest down the aisle. The operator presses nothing for about six minutes.</p></div>
   </section>
 
+  <section id="music" aria-labelledby="music-h">
+    <div class="sec-head">
+      <span class="eyebrow">For the DJ · Serato, one track per moment</span>
+      <h2 id="music-h">The music, piece by piece</h2>
+      <p>Thirteen separate tracks, one for each moment on the board, each cut to exactly its time (01 = 0:00 – 1:30, 02 = 1:30 – 2:10…). Played one after the other they make the whole 11:10 show. Downloads open from Chris's Google Drive (sign in with the Anieze account).</p>
+    </div>
+    <div class="dlhead">
+      <a class="dlbtn main" href="https://drive.google.com/uc?export=download&amp;id=1vT1leEDlw7wos4bbnIESPHcZDQbArpiz" target="_blank" rel="noopener">⬇ Download all 13 (zip, 26 MB)</a>
+      <a class="dlbtn" href="https://drive.google.com/drive/folders/1UrZDzSMz4RYMvyM1DvFWDA33JwoJGUJo" target="_blank" rel="noopener">Open the Drive folder</a>
+    </div>
+    <ol class="dllist" id="dllist">
+        <li data-p="1"><span class="n">01</span><span class="tt">0:00 – 1:30</span><span class="m"><b>Security enters (walkie crackle at 0:15)</b><span>Satie, Gnossienne 1</span></span><button type="button" class="hear" data-t="0">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1cK5yFGlUAX6oimnL3N9UaQamrLTXNSCi" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="1"><span class="n">02</span><span class="tt">1:30 – 2:10</span><span class="m"><b>The Dancer enters, teaches the phrase</b><span>Ballet → African melodic techno</span></span><button type="button" class="hear" data-t="90">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1Khov87j6aQKFQRmXl3zagE04OBXVYMQ6" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="1"><span class="n">03</span><span class="tt">2:10 – 2:50</span><span class="m"><b>“Out!”: the rush, Model 3 crosses</b><span>Techno + ticking clock</span></span><button type="button" class="hear" data-t="130">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1OpK4S47qdRCjEOuMlv5VLP6yNXmTau_C" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="1"><span class="n">04</span><span class="tt">2:50 – 3:30</span><span class="m"><b>The Dancer alone</b><span>Soft amapiano</span></span><button type="button" class="hear" data-t="170">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=156vz74D3QmnXJtXeYHOv0BDdWmvQZ7yI" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="2"><span class="n">05</span><span class="tt">3:30 – 4:09</span><span class="m"><b>The empty rail arrives</b><span>Satie, Gymnopédie 1</span></span><button type="button" class="hear" data-t="210">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1ABTQm5n5zuPuJ4ESePU38aKfcWs1mJG-" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="2"><span class="n">06</span><span class="tt">4:09 – 4:51</span><span class="m"><b>Arrival 1: make-up artist</b><span>Chopin, Grande Valse</span></span><button type="button" class="hear" data-t="249">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=14GCLtfXc5cs5CB6mK61TYcjGyuKuwUrA" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="2"><span class="n">07</span><span class="tt">4:51 – 5:33</span><span class="m"><b>Arrival 2: Model 1</b><span>Afro-house, La Nuit</span></span><button type="button" class="hear" data-t="291">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=13axx8ttKjTdAgdH8m7MGs4j4wiIw9IfX" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="2"><span class="n">08</span><span class="tt">5:33 – 6:15</span><span class="m"><b>Arrival 3: Model 2</b><span>Afrobeat, Summer Groove</span></span><button type="button" class="hear" data-t="333">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1KArARMaFPe7sBzb_ibOEvCrzQlTWlP9R" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="2"><span class="n">09</span><span class="tt">6:15 – 6:57</span><span class="m"><b>Arrival 4: the Dancer</b><span>Melodic techno</span></span><button type="button" class="hear" data-t="375">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1nNFOul0nOjKp5LOcBKmdOQ1GsvbqcVuc" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="2"><span class="n">10</span><span class="tt">6:57 – 7:39</span><span class="m"><b>Arrival 5: Model 3 and the coat</b><span>Tender pizzicato</span></span><button type="button" class="hear" data-t="417">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=15dMZ_yEmYIAoEXqjC5DtK75_PbsgRqA9" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="2"><span class="n">11</span><span class="tt">7:39 – 9:35</span><span class="m"><b>Arrival 6, rail leaves, late pair at the door</b><span>Afro-house, WE</span></span><button type="button" class="hear" data-t="459">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1J2J6ZNJIbO91bOc6arVMgViQ71tWWY2u" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="3"><span class="n">12</span><span class="tt">9:35 – 10:10</span><span class="m"><b>Late pair on stage: cut in hard</b><span>Bass hit + Afro hip-hop</span></span><button type="button" class="hear" data-t="575">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=14ToCcvhDF_BkscRR4HBMpB630untA1Im" target="_blank" rel="noopener">⬇ MP3</a></li>
+        <li data-p="3"><span class="n">13</span><span class="tt">10:10 – 11:10</span><span class="m"><b>Down the stair, seated → fade = END</b><span>Cinematic swell</span></span><button type="button" class="hear" data-t="610">▸ Listen</button><a class="dlbtn" href="https://drive.google.com/uc?export=download&amp;id=1xaqUZ8xd3RscQcFUUQ03Zn-O2mNYc3hm" target="_blank" rel="noopener">⬇ MP3</a></li>
+    </ol>
+  </section>
+
   <section id="rehearsal" aria-labelledby="reh-h">
     <div class="sec-head">
       <span class="eyebrow">Saturday · room back to the cinema at 13:00</span>
@@ -745,6 +788,7 @@ const beatEls = [];
 
 document.getElementById("looksgrid").innerHTML = LOOKS.map(l=>`<div class="lk" data-p="${partOfT(l[2])}"><div class="id"><b>${l[0]}</b><button type="button" data-t="${l[2]}" aria-label="${T.hear} ${l[0]} · ${fmt(l[2])}">▸ ${fmt(l[2])}</button></div><h4>${l[1]}</h4><p>${l[3]}</p>${l[4]?`<span class="badge">${T.newOutfit}</span>`:''}</div>`).join("");
 document.querySelectorAll("#looksgrid button").forEach(b=>b.onclick=()=>seek(+b.dataset.t));
+document.querySelectorAll("#dllist .hear").forEach(b=>b.onclick=()=>seek(+b.dataset.t));
 
 document.getElementById("gorows").innerHTML = CUES.map(c=>`<tr class="${c.go==="END"?"endrow":""}"><td><span class="go${c.go==="END"?" end":""}">${c.go==="END"?T.end:"GO "+c.go}</span></td><td>${c.when}</td><td class="file">${c.file}</td><td class="plan">${c.plan}</td></tr>`).join("");
 document.getElementById("rehlist").innerHTML = REH.map(r=>`<li class="${r[3]?"key":""}"><time>${r[0]}</time><div><p>${r[1]}</p>${r[2]?`<small>${r[2]}</small>`:""}</div></li>`).join("");
